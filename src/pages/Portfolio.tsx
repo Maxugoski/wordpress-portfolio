@@ -41,13 +41,13 @@ const Portfolio = () => {
       tags: ["React", "D3.js", "Python"],
       category: "Analytics"
     },
-    {
+   /** {
       title: "Social Media App",
       description: "Community platform with user profiles, messaging, and content sharing features.",
       image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600&h=400&fit=crop",
       tags: ["React Native", "Firebase", "Redux"],
       category: "Mobile App"
-    }
+    } **/
   ];
 
   return (
