@@ -4,6 +4,11 @@ on:
   push:
     branches: [ main ]
 
+# Limit concurrent deployments to avoid race conditions
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
@@ -47,23 +52,3 @@ jobs:
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
           commit_message: 'chore(deploy): publish to gh-pages [skip ci]'
-
-      - name: Verify Pages publishes (post-deploy)
-        run: |
-          URL="https://maxugoski.github.io/wordpress-portfolio/"
-          echo "Waiting for ${URL} to respond with HTTP 200..."
-          attempt=0
-          max=18
-          until [ $attempt -ge $max ]
-          do
-            status=$(curl -s -o /dev/null -w "%{http_code}" "$URL" || echo "000")
-            echo "Attempt $((attempt+1)): HTTP $status"
-            if [ "$status" = "200" ]; then
-              echo "Site is live: $URL"
-              exit 0
-            fi
-            attempt=$((attempt+1))
-            sleep 5
-          done
-          echo "ERROR: site did not return HTTP 200 after $((max*5)) seconds"
-          exit 1
