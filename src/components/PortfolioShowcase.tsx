@@ -7,13 +7,13 @@ export const PortfolioShowcase = () => {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="space-y-6 order-2 md:order-1 animate-fade-in">
             <blockquote className="text-xl italic text-muted-foreground border-l-4 border-primary pl-6">
-              "The developer exceeded my expectations. The redesigned site is lightning fast, 
-              visually appealing, extensible, and easy to maintain. I would recommend their work without hesitation."
+              "I don’t just build Websites —
+               I teach pixels to behave, plugins to think, and brands to speak their truth."
             </blockquote>
             
             <div className="space-y-1">
-              <p className="font-semibold">Sarah Johnson</p>
-              <p className="text-sm text-muted-foreground">CEO, TechStartup Inc.</p>
+              <p className="font-semibold">Ugochukwu Ogoke</p>
+              <p className="text-sm text-muted-foreground">WordPress Developer</p>
             </div>
           </div>
           

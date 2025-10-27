@@ -8,49 +8,21 @@ import { ExternalLink, Github } from "lucide-react";
 const PluginsThemes = () => {
   const plugins = [
     {
-      title: "Genesis Customizer",
+      title: "Wordwise AI",
       type: "Plugin",
-      description: "Adds Customizer options for the Genesis Framework, allowing you to easily customize your site's appearance without writing code.",
-      link: "#",
-      github: "#"
-    },
-    {
-      title: "Display Posts Shortcode",
-      type: "Plugin",
-      description: "A powerful shortcode for displaying posts anywhere on your WordPress site with extensive customization options.",
-      link: "#",
-      github: "#"
-    },
-    {
-      title: "Easy Custom Sidebars",
-      type: "Plugin",
-      description: "Create custom sidebars and assign them to specific pages, posts, or post types with an intuitive interface.",
-      link: "#",
-      github: "#"
+      description: "A ChatGPT-style WordPress plugin powered by the Gemini API, designed to help creators write smarter inside the WordPress dashboard.",
+      link: "https://github.com/Maxugoski/wordwise-ai",
+      github: "https://github.com/Maxugoski/wordwise-ai"
     }
   ];
 
   const themes = [
     {
-      title: "Cultivate Pro",
+      title: "AllmaxExp",
       type: "Theme",
-      description: "A clean, modern Genesis child theme designed for bloggers and content creators who want a professional look.",
-      link: "#",
-      demo: "#"
-    },
-    {
-      title: "Lifestyle Pro",
-      type: "Theme",
-      description: "A beautiful magazine-style theme perfect for lifestyle blogs, featuring a stunning homepage and multiple layout options.",
-      link: "#",
-      demo: "#"
-    },
-    {
-      title: "Authority Pro",
-      type: "Theme",
-      description: "A bold, authoritative theme for professionals and businesses who want to establish their expertise online.",
-      link: "#",
-      demo: "#"
+      description: "A professional media company WordPress theme. Clean, modern, and optimized for media organizations.",
+      link: "https://github.com/Maxugoski/AllmaxExp",
+      demo: "https://github.com/Maxugoski/AllmaxExp"
     }
   ];
 
@@ -63,7 +35,7 @@ const PluginsThemes = () => {
           <div className="container">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">Plugins & Themes</h1>
             <p className="text-xl text-muted-foreground max-w-2xl animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              Custom WordPress plugins and themes built with clean code, performance, and user experience in mind.
+              All of my plugins are available only on GitHub. I am no longer comfortable hosting my code on WordPress.org given recent actions by Matt Mullenweg..
             </p>
           </div>
         </section>

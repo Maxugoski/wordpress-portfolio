@@ -1,17 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import meImg from "@/imgs/me.png";
 
 export const Hero = () => {
   return (
-    <section className="relative overflow-hidden">
+  <section className="relative overflow-hidden text-white">
       <div className="absolute inset-0 bg-[hsl(var(--hero-bg))]" 
            style={{ background: 'var(--gradient-hero)' }} 
       />
       
       <div className="container relative">
         <div className="grid lg:grid-cols-2 gap-12 items-center py-20 lg:py-32">
-          <div className="space-y-8 text-hero-foreground animate-fade-in">
+          <div className="space-y-8 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Hi, I'm a WordPress Developer.
             </h1>
@@ -37,14 +38,19 @@ export const Hero = () => {
             </Link>
           </div>
           
-          <div className="relative h-[400px] lg:h-[500px] animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <div className="absolute inset-0 rounded-lg overflow-hidden">
-              <div className="absolute inset-0 bg-hero-foreground/10 backdrop-blur-sm" />
-              <img 
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop"
-                alt="Developer workspace"
-                className="w-full h-full object-cover"
+          <div className="relative h-[400px] lg:h-[500px] animate-fade-in flex items-center justify-center" style={{ animationDelay: '0.2s' }}>
+            <div className="relative w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] lg:w-[400px] lg:h-[400px] rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src={meImg}
+                alt="Portrait of me"
+                className="w-full h-full object-cover object-top"
               />
+
+              {/* subtle gradient overlay for polish */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/10" />
+
+              {/* decorative ring */}
+              <div className="pointer-events-none absolute -inset-1 rounded-2xl border border-white/10" />
             </div>
           </div>
         </div>
