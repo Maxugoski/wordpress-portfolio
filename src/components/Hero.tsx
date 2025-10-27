@@ -18,10 +18,11 @@ export const Hero = () => {
             
             <div className="space-y-4 text-lg md:text-xl opacity-95">
               <p>
-                I've been building custom WordPress sites for over 10 years. I specialize in creating fast, accessible, and maintainable websites.
+                I've been building custom WordPress sites for over 5 years. I live and breathe WordPress.
               </p>
-              <p>
-                My custom themes and plugins are built from the ground up to meet your specific needs without the bloat of off-the-shelf solutions.
+              <p>My custom-built websites are fast loading, accessible, and easy to manage.
+                My custom themes and plugins are built from the ground up to meet your specific needs 
+                without the bloat of off-the-shelf solutions.
               </p>
             </div>
             

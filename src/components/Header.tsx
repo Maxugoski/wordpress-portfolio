@@ -10,7 +10,7 @@ export const Header = () => {
           <div className="flex h-10 w-10 items-center justify-center rounded bg-primary text-primary-foreground font-bold text-xl">
             D
           </div>
-          <span className="font-bold text-lg uppercase tracking-tight">Developer Portfolio</span>
+          <span className="font-bold text-lg uppercase tracking-tight">Wordpress Developer Portfolio</span>
         </Link>
         
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
