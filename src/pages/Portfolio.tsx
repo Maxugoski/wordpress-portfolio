@@ -7,39 +7,39 @@ import { ExternalLink } from "lucide-react";
 const Portfolio = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A modern e-commerce solution with real-time inventory management and payment processing.",
-      image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=600&h=400&fit=crop",
-      tags: ["React", "Node.js", "Stripe"],
+      title: "Allmax Media Website",
+      description: "A creative media agency and content management system showcasing media assets, blog posts, and campaigns.",
+      image: "src/imgs/Allmaxmedia.png",
+      tags: ["React", "Node.js", "Typescript"],
       category: "Web Application"
     },
     {
-      title: "Real Estate Portal",
-      description: "Property listing platform with advanced search, mapping, and virtual tour features.",
-      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop",
-      tags: ["Vue.js", "Firebase", "Maps API"],
-      category: "Web Portal"
+      title: "    AHVC Center for Heart & Vascular Clinic",
+      description: " A comprehensive healthcare website with appointment scheduling and patient resources.",
+      image: "src/imgs/ahvc-portfolio.webp",
+      tags: ["Wordpress", "php", "REST API"],
+      category: "Website"
     },
     {
-      title: "Healthcare Dashboard",
-      description: "HIPAA-compliant patient management system with appointment scheduling and telemedicine.",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
-      tags: ["React", "PostgreSQL", "WebRTC"],
-      category: "Dashboard"
+      title: "Captain Steve Portfolio website",
+      description: "Maritime professional portfolio showcasing experience, projects, and certifications.",
+      image: "src/imgs/captain.png",
+      tags: ["Wordpress", "Figma", "CRO/SEO Optimization"],
+      category: "Portfolio"
     },
     {
-      title: "Content Management System",
-      description: "Custom CMS built for content creators with drag-and-drop page builder.",
-      image: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=600&h=400&fit=crop",
-      tags: ["Next.js", "GraphQL", "MongoDB"],
-      category: "CMS"
+      title: "Harris Northwest Advisors",
+      description: "A leading boutique M&A advisory firm",
+      image: "src/imgs/harris-lp.webp",
+      tags: ["Wordpress", "php", "CRO/SEO Optimization"],
+      category: "Consulting Website"
     },
     {
-      title: "Analytics Platform",
-      description: "Data visualization tool with real-time metrics and customizable reporting.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-      tags: ["React", "D3.js", "Python"],
-      category: "Analytics"
+      title: "Allmax Learn Platform",
+      description: "An educational content hub integrating custom learning modules, progress tracking, and user dashboards.",
+      image: "src/imgs/LMS.png",
+      tags: ["React", "Node.js", "MongoDB"],
+      category: "LMS"
     },
    /** {
       title: "Social Media App",

@@ -10,7 +10,7 @@ export const Footer = () => {
               <div className="flex h-8 w-8 items-center justify-center rounded bg-primary text-primary-foreground font-bold">
                 D
               </div>
-              <span className="font-bold">Developer</span>
+              <span className="font-bold">Web Developer</span>
             </div>
             <p className="text-sm text-muted-foreground">
               Building fast, accessible, and beautiful web applications.
@@ -41,15 +41,15 @@ export const Footer = () => {
             <h3 className="font-semibold mb-4">Connect</h3>
             <ul className="space-y-2 text-sm">
               <li><Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Twitter</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">GitHub</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">LinkedIn</a></li>
+              <li><a href="https://x.com/whoisugoski" className="text-muted-foreground hover:text-primary transition-colors">Twitter</a></li>
+              <li><a href="https://github.com/Maxugoski" className="text-muted-foreground hover:text-primary transition-colors">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/ugochukwu-ogoke-212508177/" className="text-muted-foreground hover:text-primary transition-colors">LinkedIn</a></li>
             </ul>
           </div>
         </div>
         
         <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Developer Portfolio. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Ugochukwu's Portfolio. All rights reserved.</p>
         </div>
       </div>
     </footer>
