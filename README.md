@@ -46,3 +46,10 @@ AI Tools: Gemini API, OpenAI, Hugging Face
 Design Tools: Adobe Creative Suite, Canva, Figma
 
 ## 🌐 Live Portfolio
+You can view the deployed site here: https://maxugoski.github.io/wordpress-portfolio/
+
+[![Deploy](https://github.com/Maxugoski/wordpress-portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/Maxugoski/wordpress-portfolio/actions/workflows/deploy.yml)
+
+Notes:
+- The site is automatically built and deployed to the `gh-pages` branch on push to `main` via GitHub Actions. It uses Vite's `base` setting so asset paths work correctly when hosted under the repository path.
+- If you hit issues with deployment, check Settings → Pages and the Actions logs for the `build-and-deploy` job.

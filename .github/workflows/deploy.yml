@@ -28,6 +28,17 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Smoke-check built index.html
+        run: |
+          echo "Checking dist/index.html for expected base path..."
+          if grep -q "/wordpress-portfolio/assets" dist/index.html; then
+            echo "Base path OK"
+            head -n 40 dist/index.html
+          else
+            echo "ERROR: built index.html does not include /wordpress-portfolio/ in asset paths"
+            exit 1
+          fi
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
