@@ -13,15 +13,15 @@ export const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center py-20 lg:py-32">
           <div className="space-y-8 text-hero-foreground animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Hi, I'm a Web Developer.
+              Hi, I'm a WordPress Developer.
             </h1>
             
             <div className="space-y-4 text-lg md:text-xl opacity-95">
               <p>
-                I've been building websites for over 10 years. I live and breathe modern web development.
+                I've been building custom WordPress sites for over 10 years. I specialize in creating fast, accessible, and maintainable websites.
               </p>
               <p>
-                My custom-built applications are fast loading, accessible, and easy to manage.
+                My custom themes and plugins are built from the ground up to meet your specific needs without the bloat of off-the-shelf solutions.
               </p>
             </div>
             

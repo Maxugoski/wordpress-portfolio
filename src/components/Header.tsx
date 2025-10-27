@@ -27,10 +27,10 @@ export const Header = () => {
             Portfolio
           </Link>
           <Link 
-            to="/blog" 
+            to="/plugins-themes" 
             className="transition-colors hover:text-primary"
           >
-            Blog
+            Plugins/Themes
           </Link>
           <Link 
             to="/contact" 

@@ -6,17 +6,32 @@ export const Services = () => {
     {
       icon: Code,
       title: "Custom built to your specific needs",
-      description: "Your business needs more than a generic template with minor customization. Off the rack solutions are bloated with features you don't need."
+      description: "Your business needs more than a generic theme with minor customization. Off the rack themes are bloated with features you don't need."
     },
     {
       icon: Zap,
-      title: "Minimal dependencies",
-      description: "I use industry standard tools when they make sense, and build your unique functionality from scratch for optimal performance."
+      title: "Minimal plugins",
+      description: "Plugins are easy to install but hard to remove. Websites with dozens of plugins can become a house of cards – you don't know what will happen if you deactivate one. I use industry standard plugins when they make sense (like a contact form), and build your unique functionality from scratch."
     },
     {
       icon: FileText,
-      title: "As easy to edit as a document",
-      description: "The content management system is intuitive and straightforward. You don't need technical knowledge to update your site."
+      title: "As easy to edit as a Word document",
+      description: "The purpose of a CMS is to let you manage content yourself, without the need of a developer. I focus on crafting the backend editing experience to be as easy to use as the frontend. You can see this in action in Cultivate Category Pages."
+    },
+    {
+      icon: Zap,
+      title: "Faster than your competitors",
+      description: "A 0.1 second improvement of mobile site speed can increase conversion rates by 8-10%. I can deliver speed and efficiency no off-the-shelf theme can match."
+    },
+    {
+      icon: Code,
+      title: "Accessible to all users",
+      description: "15% of visitors experience some level of disability, and accessibility lawsuits are increasing. I build websites that meet the Web Content Accessibility Guidelines (WCAG) 2.1 standards."
+    },
+    {
+      icon: FileText,
+      title: "Built to last",
+      description: "The web changes fast, but you don't need a new website every few years. I can build you a solid foundation that will adapt to your future needs."
     }
   ];
 
@@ -27,7 +42,7 @@ export const Services = () => {
           How I develop websites
         </h2>
         
-        <div className="grid md:grid-cols-3 gap-8 mt-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {services.map((service, index) => (
             <Card 
               key={index}

@@ -1,0 +1,156 @@
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ExternalLink, Github } from "lucide-react";
+
+const PluginsThemes = () => {
+  const plugins = [
+    {
+      title: "Genesis Customizer",
+      type: "Plugin",
+      description: "Adds Customizer options for the Genesis Framework, allowing you to easily customize your site's appearance without writing code.",
+      link: "#",
+      github: "#"
+    },
+    {
+      title: "Display Posts Shortcode",
+      type: "Plugin",
+      description: "A powerful shortcode for displaying posts anywhere on your WordPress site with extensive customization options.",
+      link: "#",
+      github: "#"
+    },
+    {
+      title: "Easy Custom Sidebars",
+      type: "Plugin",
+      description: "Create custom sidebars and assign them to specific pages, posts, or post types with an intuitive interface.",
+      link: "#",
+      github: "#"
+    }
+  ];
+
+  const themes = [
+    {
+      title: "Cultivate Pro",
+      type: "Theme",
+      description: "A clean, modern Genesis child theme designed for bloggers and content creators who want a professional look.",
+      link: "#",
+      demo: "#"
+    },
+    {
+      title: "Lifestyle Pro",
+      type: "Theme",
+      description: "A beautiful magazine-style theme perfect for lifestyle blogs, featuring a stunning homepage and multiple layout options.",
+      link: "#",
+      demo: "#"
+    },
+    {
+      title: "Authority Pro",
+      type: "Theme",
+      description: "A bold, authoritative theme for professionals and businesses who want to establish their expertise online.",
+      link: "#",
+      demo: "#"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      
+      <main className="flex-1">
+        <section className="py-20 bg-muted/30">
+          <div className="container">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">Plugins & Themes</h1>
+            <p className="text-xl text-muted-foreground max-w-2xl animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              Custom WordPress plugins and themes built with clean code, performance, and user experience in mind.
+            </p>
+          </div>
+        </section>
+        
+        <section className="py-20">
+          <div className="container">
+            <h2 className="text-3xl md:text-4xl font-bold mb-12">WordPress Plugins</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+              {plugins.map((plugin, index) => (
+                <Card 
+                  key={index}
+                  className="hover:shadow-elegant transition-all duration-300 hover-scale animate-fade-in"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <CardHeader>
+                    <div className="flex items-center justify-between mb-2">
+                      <Badge variant="secondary">{plugin.type}</Badge>
+                    </div>
+                    <CardTitle className="text-xl">
+                      {plugin.title}
+                    </CardTitle>
+                  </CardHeader>
+                  
+                  <CardContent>
+                    <p className="text-muted-foreground mb-6">{plugin.description}</p>
+                    <div className="flex gap-3">
+                      <Button size="sm" variant="outline" asChild>
+                        <a href={plugin.link} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="h-4 w-4 mr-2" />
+                          View Plugin
+                        </a>
+                      </Button>
+                      <Button size="sm" variant="ghost" asChild>
+                        <a href={plugin.github} target="_blank" rel="noopener noreferrer">
+                          <Github className="h-4 w-4 mr-2" />
+                          GitHub
+                        </a>
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <h2 className="text-3xl md:text-4xl font-bold mb-12">WordPress Themes</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {themes.map((theme, index) => (
+                <Card 
+                  key={index}
+                  className="hover:shadow-elegant transition-all duration-300 hover-scale animate-fade-in"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <CardHeader>
+                    <div className="flex items-center justify-between mb-2">
+                      <Badge variant="secondary">{theme.type}</Badge>
+                    </div>
+                    <CardTitle className="text-xl">
+                      {theme.title}
+                    </CardTitle>
+                  </CardHeader>
+                  
+                  <CardContent>
+                    <p className="text-muted-foreground mb-6">{theme.description}</p>
+                    <div className="flex gap-3">
+                      <Button size="sm" variant="outline" asChild>
+                        <a href={theme.link} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="h-4 w-4 mr-2" />
+                          View Theme
+                        </a>
+                      </Button>
+                      <Button size="sm" variant="ghost" asChild>
+                        <a href={theme.demo} target="_blank" rel="noopener noreferrer">
+                          Live Demo
+                        </a>
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </div>
+  );
+};
+
+export default PluginsThemes;
