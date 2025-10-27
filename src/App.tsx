@@ -14,10 +14,11 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
+  <TooltipProvider>
+  <Toaster />
+  <Sonner />
+  {/* When deploying to GitHub Pages under a repo path, set the basename */}
+  <BrowserRouter basename="/wordpress-portfolio">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />

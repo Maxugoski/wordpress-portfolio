@@ -5,6 +5,9 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // base path for GitHub Pages when repository is served at
+  // https://<user>.github.io/wordpress-portfolio/
+  base: '/wordpress-portfolio/',
   server: {
     host: "::",
     port: 8080,
