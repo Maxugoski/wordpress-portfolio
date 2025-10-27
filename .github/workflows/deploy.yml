@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -39,11 +39,38 @@ jobs:
             exit 1
           fi
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: gh-pages
-          user_name: github-actions
-          user_email: github-actions@github.com
+      - name: Deploy to `docs/` on main (GitHub Pages source: main)
+        run: |
+          echo "Deploying built site to docs/ on the main branch"
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          rm -rf docs || true
+          mkdir -p docs
+          cp -r dist/* docs/
+          git add docs
+          if git diff --cached --quiet; then
+            echo "No changes to deploy"
+          else
+            git commit -m "chore(deploy): update docs [skip ci]"
+            git push origin HEAD:main
+          fi
+
+      - name: Verify Pages publishes (post-deploy)
+        run: |
+          URL="https://maxugoski.github.io/wordpress-portfolio/"
+          echo "Waiting for ${URL} to respond with HTTP 200..."
+          attempt=0
+          max=18
+          until [ $attempt -ge $max ]
+          do
+            status=$(curl -s -o /dev/null -w "%{http_code}" "$URL" || echo "000")
+            echo "Attempt $((attempt+1)): HTTP $status"
+            if [ "$status" = "200" ]; then
+              echo "Site is live: $URL"
+              exit 0
+            fi
+            attempt=$((attempt+1))
+            sleep 5
+          done
+          echo "ERROR: site did not return HTTP 200 after $((max*5)) seconds"
+          exit 1
