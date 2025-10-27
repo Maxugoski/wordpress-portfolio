@@ -6,8 +6,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 jobs:
   build-and-deploy:
@@ -39,25 +37,16 @@ jobs:
             exit 1
           fi
 
-      - name: Deploy to `docs/` on main (GitHub Pages source: main)
-        run: |
-          echo "Deploying built site to docs/ on the main branch"
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          rm -rf docs || true
-          mkdir -p docs
-          cp -r dist/* docs/
-          # Prevent GitHub Pages/Jekyll from attempting to process the site
-          # (we're publishing a pre-built static site).
-          echo "" > docs/.nojekyll
-          # Stage all changes (add/update/delete) under docs
-          git add -A docs
-          if git diff --cached --quiet; then
-            echo "No changes to deploy"
-          else
-            git commit -m "chore(deploy): update docs [skip ci]"
-            git push origin HEAD:main
-          fi
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          # Prevent Jekyll processing (we're deploying a pre-built site)
+          enable_jekyll: false
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: 'chore(deploy): publish to gh-pages [skip ci]'
 
       - name: Verify Pages publishes (post-deploy)
         run: |
