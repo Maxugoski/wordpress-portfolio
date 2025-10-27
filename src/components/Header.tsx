@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Search, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import {
   Drawer,
   DrawerTrigger,
@@ -28,19 +28,10 @@ export const Header = () => {
           <Link to="/portfolio" className="transition-colors hover:text-primary">Portfolio</Link>
           <Link to="/plugins-themes" className="transition-colors hover:text-primary">Plugins/Themes</Link>
           <Link to="/contact" className="transition-colors hover:text-primary">Contact</Link>
-          <Button variant="ghost" size="icon">
-            <Search className="h-5 w-5" />
-          </Button>
         </nav>
 
         {/* Mobile actions */}
         <div className="flex items-center gap-2 md:hidden">
-          <Button variant="ghost" size="icon" asChild>
-            <Link to="/search">
-              <Search className="h-5 w-5" />
-            </Link>
-          </Button>
-
           <Drawer>
             <DrawerTrigger asChild>
               <Button variant="ghost" size="icon" aria-label="Open menu">
