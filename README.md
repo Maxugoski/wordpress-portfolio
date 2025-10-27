@@ -1,73 +1,50 @@
-# Welcome to your Lovable project
 
-## Project info
+## 🧩 Ugochukwu Maduagufor-Ogoke — WordPress Developer Portfolio
 
-**URL**: https://lovable.dev/projects/b62ce052-57bf-4bec-a1c5-acf8be88193f
+Welcome to my WordPress Developer Portfolio, a showcase of my work in custom plugin development, theme customization, and AI-integrated WordPress tools.
+I build fast, scalable, and human-centered WordPress experiences — combining elegant design with powerful backend logic.
 
-## How can I edit this code?
+## 🛠️ What I Do
 
-There are several ways of editing your application.
+# Custom Plugin Development:
+I create unique plugins that extend WordPress functionality — from AI writing assistants to marketing automation systems.
 
-**Use Lovable**
+# Theme Development & Customization:
+Responsive, SEO-optimized, and performance-driven WordPress themes tailored to each project’s brand identity.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b62ce052-57bf-4bec-a1c5-acf8be88193f) and start prompting.
+# REST API & AI Integration:
+Seamless integration with APIs like Google Gemini, OpenAI, and custom REST endpoints to power intelligent web experiences.
 
-Changes made via Lovable will be committed automatically to this repo.
+# Speed Optimization & Security:
+Caching, database tuning, and secure coding practices for stable and efficient WordPress deployments.
 
-**Use your preferred IDE**
+# Content & UX Strategy:
+Helping brands translate visual identity into digital experiences that convert and inspire.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+# 💡 Featured Projects
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+WordWise AI Plugin:
+A ChatGPT-style WordPress plugin powered by the Gemini API, designed to help creators write smarter inside the WordPress dashboard.
+Tech: PHP · JavaScript · Tailwind CSS · Gemini API
 
-Follow these steps:
+AllmaxEXp Theme: 
+A professional media company WordPress theme. Clean, modern, and optimized for media organizations.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Allmax Learn Platform:
+An educational content hub integrating custom learning modules, progress tracking, and user dashboards.
+Tech: WordPress · PHP · MySQL · Custom Post Types
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Allmax Media Website:
+A creative portfolio and content management system showcasing media assets, blog posts, and campaigns.
+Tech: WordPress · Elementor · Custom Plugin Extensions
 
-# Step 3: Install the necessary dependencies.
-npm i
+🧰 Tech Stack
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Languages: PHP, JavaScript, HTML, CSS
+Frameworks & Tools: WordPress, TailwindCSS, Figma, Git, REST API, MySQL
+AI Tools: Gemini API, OpenAI, Hugging Face
+Design Tools: Adobe Creative Suite, Canva, Figma
 
-**Edit a file directly in GitHub**
+🌐 Live Portfolio
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/b62ce052-57bf-4bec-a1c5-acf8be88193f) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+🔗 View My Portfolio
