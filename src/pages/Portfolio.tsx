@@ -4,40 +4,47 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
 
+// Import images so Vite can process and emit them correctly
+import imgAllmax from "@/imgs/Allmaxmedia.png";
+import imgAhvc from "@/imgs/ahvc-portfolio.webp";
+import imgCaptain from "@/imgs/captain.png";
+import imgHarris from "@/imgs/harris-lp.webp";
+import imgLMS from "@/imgs/LMS.png";
+
 const Portfolio = () => {
   const projects = [
     {
       title: "Allmax Media Website",
       description: "A creative media agency and content management system showcasing media assets, blog posts, and campaigns.",
-      image: "src/imgs/Allmaxmedia.png",
+      image: imgAllmax,
       tags: ["React", "Node.js", "Typescript"],
       category: "Web Application"
     },
     {
-      title: "    AHVC Center for Heart & Vascular Clinic",
-      description: " A comprehensive healthcare website with appointment scheduling and patient resources.",
-      image: "src/imgs/ahvc-portfolio.webp",
+      title: "AHVC Center for Heart & Vascular Clinic",
+      description: "A comprehensive healthcare website with appointment scheduling and patient resources.",
+      image: imgAhvc,
       tags: ["Wordpress", "php", "REST API"],
       category: "Website"
     },
     {
       title: "Captain Steve Portfolio website",
       description: "Maritime professional portfolio showcasing experience, projects, and certifications.",
-      image: "src/imgs/captain.png",
+      image: imgCaptain,
       tags: ["Wordpress", "Figma", "CRO/SEO Optimization"],
       category: "Portfolio"
     },
     {
       title: "Harris Northwest Advisors",
       description: "A leading boutique M&A advisory firm",
-      image: "src/imgs/harris-lp.webp",
+      image: imgHarris,
       tags: ["Wordpress", "php", "CRO/SEO Optimization"],
       category: "Consulting Website"
     },
     {
       title: "Allmax Learn Platform",
       description: "An educational content hub integrating custom learning modules, progress tracking, and user dashboards.",
-      image: "src/imgs/LMS.png",
+      image: imgLMS,
       tags: ["React", "Node.js", "MongoDB"],
       category: "LMS"
     },
