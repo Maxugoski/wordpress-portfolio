@@ -1,19 +1,45 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { SEOHead } from "@/components/SEOHead";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const Contact = () => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+
+    try {
+      // Using Email.js or a similar service would be better in production
+      const response = await fetch(`https://formspree.io/f/${process.env.FORMSPREE_ID || 'your-formspree-id'}`, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        alert('Thank you for your message! I will get back to you soon.');
+        form.reset();
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      alert('Sorry, there was an error sending your message. Please try again or contact me directly at ugochukwuogoke@gmail.com');
+    }
   };
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead 
+        title="Contact Me - WordPress Developer"
+        description="Get in touch for WordPress development services. Expert in custom themes and plugins with 6+ years experience. Available for freelance projects and consultations."
+      />
       <Header />
       
       <main className="flex-1">
@@ -37,15 +63,15 @@ const Contact = () => {
                   <CardContent className="space-y-4">
                     <div className="flex items-center space-x-3">
                       <Mail className="h-5 w-5 text-primary" />
-                      <span>hello@developer.com</span>
+                      <span>ugochukwuogoke@gmail.com</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Phone className="h-5 w-5 text-primary" />
-                      <span>+1 (555) 123-4567</span>
+                      <span>+2348137960837</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <MapPin className="h-5 w-5 text-primary" />
-                      <span>San Francisco, CA</span>
+                      <span>Nigeria</span>
                     </div>
                   </CardContent>
                 </Card>

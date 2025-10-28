@@ -2,16 +2,21 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Award, Users, Briefcase } from "lucide-react";
+import { SEOHead } from "@/components/SEOHead";
 
 const About = () => {
   const stats = [
-    { icon: Briefcase, value: "10+", label: "Years Experience" },
+    { icon: Briefcase, value: "6+", label: "Years Experience" },
     { icon: Users, value: "100+", label: "Happy Clients" },
     { icon: Award, value: "50+", label: "Projects Completed" }
   ];
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead 
+        title="About Me - WordPress Developer with 6+ Years Experience"
+        description="WordPress developer specializing in custom theme and plugin development. Creator of WordWise AI plugin and AllmaxExp theme. Expert in full-stack WordPress development with 6+ years experience."
+      />
       <Header />
       
       <main className="flex-1">
@@ -22,22 +27,22 @@ const About = () => {
               
               <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground animate-fade-in" style={{ animationDelay: '0.1s' }}>
                 <p className="text-xl">
-                  I'm a passionate web developer dedicated to creating exceptional digital experiences 
-                  that combine beautiful design with powerful functionality.
+                  I'm a seasoned WordPress developer with 6+ years of experience, specializing in creating 
+                  custom themes and powerful plugins that transform WordPress websites into exceptional 
+                  digital experiences.
                 </p>
                 
                 <p>
-                  With over a decade of experience in web development, I've worked with businesses 
-                  of all sizes—from startups to established enterprises—helping them build their 
-                  online presence and achieve their goals.
+                  Throughout my career, I've developed innovative WordPress solutions for businesses 
+                  of all sizes. My portfolio includes the WordWise AI plugin, which revolutionizes 
+                  content creation with AI integration, and the AllmaxExp theme, showcasing my ability 
+                  to create modern, performance-optimized WordPress themes.
                 </p>
                 
                 <p>
-                  My approach focuses on understanding your unique needs and crafting custom solutions 
-                  that aren't just visually appealing, but also fast, accessible, and easy to maintain. 
-                  I believe in clean code, modern best practices, and delivering projects that stand 
-                  the test of time.
-                </p>
+                  My approach combines deep WordPress expertise with clean code practices and modern 
+                  development techniques. I specialize in building scalable, maintainable WordPress 
+                  solutions that empower businesses to grow their online presence effectively.</p>
               </div>
             </div>
           </div>
@@ -70,26 +75,29 @@ const About = () => {
               
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-xl font-semibold mb-3">Frontend Development</h3>
+                  <h3 className="text-xl font-semibold mb-3">WordPress Plugin Development</h3>
                   <p className="text-muted-foreground">
-                    Expert in modern JavaScript frameworks including React, Vue, and TypeScript. 
-                    I create responsive, accessible interfaces that work seamlessly across all devices.
+                    Expert in creating custom WordPress plugins that extend functionality and integrate 
+                    modern technologies. My plugins, like WordWise AI, demonstrate my ability to 
+                    integrate complex features while maintaining excellent performance and user experience.
                   </p>
                 </div>
                 
                 <div>
-                  <h3 className="text-xl font-semibold mb-3">Backend Development</h3>
+                  <h3 className="text-xl font-semibold mb-3">WordPress Theme Development</h3>
                   <p className="text-muted-foreground">
-                    Proficient in Node.js, Python, and various database technologies. I build 
-                    robust server-side applications and RESTful APIs that power modern web apps.
+                    Skilled in crafting custom WordPress themes that combine beautiful design with 
+                    powerful functionality. I create themes that are fast, responsive, and optimized 
+                    for search engines, as demonstrated by my AllmaxExp theme.
                   </p>
                 </div>
                 
                 <div>
-                  <h3 className="text-xl font-semibold mb-3">UI/UX Design</h3>
+                  <h3 className="text-xl font-semibold mb-3">Full-Stack WordPress Development</h3>
                   <p className="text-muted-foreground">
-                    Strong eye for design and user experience. I ensure every project not only 
-                    looks great but provides an intuitive, delightful experience for users.
+                    Comprehensive expertise in WordPress ecosystem including custom post types, 
+                    taxonomies, REST API, and database optimization. I ensure each project follows 
+                    WordPress coding standards and best practices for maintainability and security.
                   </p>
                 </div>
               </div>
