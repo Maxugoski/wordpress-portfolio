@@ -81,20 +81,59 @@ const Contact = () => {
                 
                 <Card>
                   <CardHeader>
-                    <CardTitle>Office Hours</CardTitle>
+                    <CardTitle>Social</CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-2">
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Monday - Friday</span>
-                      <span className="font-medium">9:00 AM - 6:00 PM</span>
+                  <CardContent className="space-y-4">
+                    <div className="flex items-center space-x-3">
+                      <span className="font-medium">GitHub</span>
+                      <a
+                        href="https://github.com/Maxugoski"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary underline"
+                        aria-label="GitHub profile"
+                      >
+                        github.com/Maxugoski
+                      </a>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Saturday</span>
-                      <span className="font-medium">10:00 AM - 4:00 PM</span>
+
+                    <div className="flex items-center space-x-3">
+                      <span className="font-medium">LinkedIn</span>
+                      <a
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary underline"
+                        aria-label="LinkedIn profile (update link)"
+                      >
+                        linkedin.com/in/ugochukwu-ogoke-212508177/
+                      </a>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Sunday</span>
-                      <span className="font-medium">Closed</span>
+
+                    <div className="flex items-center space-x-3">
+                      <span className="font-medium">Twitter</span>
+                      <a
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary underline"
+                        aria-label="Twitter profile (update link)"
+                      >
+                        twitter.com/whoisugoski
+                      </a>
+                    </div>
+
+                    <div className="flex items-center space-x-3">
+                      <span className="font-medium">Instagram</span>
+                      <a
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary underline"
+                        aria-label="Instagram profile (update link)"
+                      >
+                        instagram.com/whoisugoski
+                      </a>
                     </div>
                   </CardContent>
                 </Card>
