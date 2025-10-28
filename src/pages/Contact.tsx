@@ -14,8 +14,8 @@ const Contact = () => {
     const formData = new FormData(form);
 
     try {
-      // Using Email.js or a similar service would be better in production
-      const response = await fetch(`https://formspree.io/f/${process.env.FORMSPREE_ID || 'your-formspree-id'}`, {
+      // Submit to Formspree endpoint (configured to forward to ugochukwuogoke@gmail.com)
+      const response = await fetch('https://formspree.io/f/mkgpjqrr', {
         method: 'POST',
         body: formData,
         headers: {
@@ -27,9 +27,12 @@ const Contact = () => {
         alert('Thank you for your message! I will get back to you soon.');
         form.reset();
       } else {
+        const payload = await response.json().catch(() => ({}));
+        console.error('Formspree error', payload);
         throw new Error('Failed to send message');
       }
     } catch (error) {
+      console.error(error);
       alert('Sorry, there was an error sending your message. Please try again or contact me directly at ugochukwuogoke@gmail.com');
     }
   };
@@ -102,29 +105,35 @@ const Contact = () => {
                   <CardTitle>Send a Message</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
+                    {/* Honeypot to catch bots */}
+                    <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" style={{ display: 'none' }} />
+                    <input type="hidden" name="_subject" value="New message from portfolio site" />
+
                     <div className="space-y-2">
                       <label htmlFor="name" className="text-sm font-medium">Name</label>
-                      <Input id="name" placeholder="Your name" required />
+                      <Input id="name" name="name" placeholder="Your name" required aria-label="Your name" />
                     </div>
                     
                     <div className="space-y-2">
                       <label htmlFor="email" className="text-sm font-medium">Email</label>
-                      <Input id="email" type="email" placeholder="your.email@example.com" required />
+                      <Input id="email" name="email" type="email" placeholder="your.email@example.com" required aria-label="Your email" />
                     </div>
                     
                     <div className="space-y-2">
                       <label htmlFor="subject" className="text-sm font-medium">Subject</label>
-                      <Input id="subject" placeholder="What's this about?" required />
+                      <Input id="subject" name="subject" placeholder="What's this about?" required aria-label="Subject" />
                     </div>
                     
                     <div className="space-y-2">
                       <label htmlFor="message" className="text-sm font-medium">Message</label>
                       <Textarea 
                         id="message" 
+                        name="message"
                         placeholder="Tell me about your project..." 
                         rows={6}
                         required 
+                        aria-label="Message"
                       />
                     </div>
                     
