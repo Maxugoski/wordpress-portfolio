@@ -42,7 +42,8 @@ const About = () => {
                 <p>
                   My approach combines deep WordPress expertise with clean code practices and modern 
                   development techniques. I specialize in building scalable, maintainable WordPress 
-                  solutions that empower businesses to grow their online presence effectively.</p>
+                  solutions that empower businesses to grow their online presence effectively.
+                </p>
               </div>
             </div>
           </div>
@@ -99,6 +100,54 @@ const About = () => {
                     taxonomies, REST API, and database optimization. I ensure each project follows 
                     WordPress coding standards and best practices for maintainability and security.
                   </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Book Section */}
+        <section className="py-20">
+          <div className="container">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8">My Book</h2>
+              
+              <div className="flex flex-col md:flex-row gap-8 items-center">
+                <div className="md:w-1/3 flex justify-center">
+                  <img 
+                    src="/eic.svg" 
+                    alt="Ethics in Code: A Moral Framework for Modern Software" 
+                    className="w-48 h-auto rounded-lg shadow-lg"
+                  />
+                </div>
+                
+                <div className="md:w-2/3">
+                  <h3 className="text-2xl font-bold mb-4">Ethics in Code: A Moral Framework for Modern Software</h3>
+                  
+                  <p className="text-muted-foreground mb-4 italic">
+                    When code decides how people live, every keystroke becomes an ethical act.
+                  </p>
+                  
+                  <p className="text-muted-foreground mb-4">
+                    Ethics in Code reveals how software now shapes human behavior, privacy, and justice — 
+                    often without conscience. Blending philosophy, real-world tech stories, and moral clarity, 
+                    the author challenges developers and digital creators to see beyond functionality and ask 
+                    the deeper question: Who does this code empower, and who does it exclude?
+                  </p>
+                  
+                  <p className="text-muted-foreground mb-6">
+                    From The Software Engineer's Oath to The Moral Stack, this book redefines what it means 
+                    to build technology responsibly — with empathy, inclusivity, and humanity at its core.
+                  </p>
+                  
+                  <a 
+                    href="https://www.amazon.com/dp/B0G1C6HS5Z" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-block bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-md font-medium transition-colors"
+                  >
+                    Get the Book on Amazon
+                  </a>
                 </div>
               </div>
             </div>
