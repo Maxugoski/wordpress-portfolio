@@ -131,7 +131,7 @@ const About = () => {
                   <p className="text-muted-foreground mb-4">
                     Ethics in Code reveals how software now shapes human behavior, privacy, and justice — 
                     often without conscience. Blending philosophy, real-world tech stories, and moral clarity, 
-                    the author challenges developers and digital creators to see beyond functionality and ask 
+                    I challenge developers and digital creators to see beyond functionality and ask 
                     the deeper question: Who does this code empower, and who does it exclude?
                   </p>
                   
