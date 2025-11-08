@@ -11,9 +11,9 @@ export const SEOHead = ({
   title, 
   description, 
   type = 'website',
-  imageUrl = '/og-image.jpg' // Add a default OG image
+  imageUrl = '/wordpress-portfolio/og-image.jpg' // Add a default OG image
 }: SEOHeadProps) => {
-  const baseUrl = 'https://maxugoski.github.io/wordpress-portfolio';
+  const baseUrl = 'https://maxugoski.github.io';
   
   return (
     <Helmet>
@@ -21,6 +21,7 @@ export const SEOHead = ({
       <meta name="description" content={description} />
       
       {/* Open Graph / Facebook */}
+      <meta property="og:url" content={`${baseUrl}/wordpress-portfolio/`} />
       <meta property="og:type" content={type} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -28,6 +29,7 @@ export const SEOHead = ({
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content={`${baseUrl}/wordpress-portfolio/`} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={`${baseUrl}${imageUrl}`} />
