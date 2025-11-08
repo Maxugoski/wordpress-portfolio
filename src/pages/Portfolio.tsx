@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
+import { SEOHead } from "@/components/SEOHead";
 
 // Import images so Vite can process and emit them correctly
 import imgAllmax from "@/imgs/Allmaxmedia.png";
@@ -59,6 +60,10 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead 
+        title="Portfolio - WordPress Developer Projects | Ugochukwu Ogoke"
+        description="View my portfolio of WordPress development projects including custom themes, plugins, and full website builds. Each project demonstrates my expertise in creating tailored WordPress solutions."
+      />
       <Header />
       
       <main className="flex-1">

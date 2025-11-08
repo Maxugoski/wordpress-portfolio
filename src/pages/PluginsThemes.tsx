@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
+import { SEOHead } from "@/components/SEOHead";
 
 const PluginsThemes = () => {
   const plugins = [
@@ -28,6 +29,10 @@ const PluginsThemes = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead 
+        title="WordPress Plugins & Themes | Ugochukwu Ogoke"
+        description="Explore my custom WordPress plugins and themes available on GitHub. Including Wordwise AI plugin and AllmaxExp theme, created with modern development practices."
+      />
       <Header />
       
       <main className="flex-1">
