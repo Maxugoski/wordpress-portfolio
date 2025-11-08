@@ -115,7 +115,7 @@ const About = () => {
               <div className="flex flex-col md:flex-row gap-8 items-center">
                 <div className="md:w-1/3 flex justify-center">
                   <img 
-                    src="/eic.svg" 
+                    src="/wordpress-portfolio/eic.svg" 
                     alt="Ethics in Code: A Moral Framework for Modern Software" 
                     className="w-48 h-auto rounded-lg shadow-lg"
                   />
